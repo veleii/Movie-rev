@@ -4,7 +4,7 @@ const checkRole = (requiredRole) => {
     if (!req.user || req.user.role !== requiredRole) {
       return res
         .status(403)
-        .json({ message: "Du saknar rätt genom rolechecken behörighet" });
+        .json({ message: "Du saknar rätt behörighet (i rolecheck)" });
     }
     next();
   };
