@@ -1,7 +1,7 @@
 import Review from "./reviewsModel.js";
 import Movie from "../movies/moviesModel.js";
 
-// POST /reviews - Skapa en recension (endast inloggade användare)
+// POST /reviews  (endast inloggade användare)
 export const createReview = async (req, res) => {
   try {
     const { movieId, rating, comment } = req.body;
@@ -24,7 +24,7 @@ export const createReview = async (req, res) => {
   }
 };
 
-// GET /reviews - Hämta alla recensioner (offentligt)
+// GET /reviews (offentligt)
 export const getAllReviews = async (req, res) => {
   try {
     const reviews = await Review.find()
@@ -39,7 +39,7 @@ export const getAllReviews = async (req, res) => {
   }
 };
 
-// GET /reviews/:id - Hämta en specifik recension
+// GET /reviews/:id
 export const getReviewById = async (req, res) => {
   try {
     const review = await Review.findById(req.params.id)
@@ -58,7 +58,7 @@ export const getReviewById = async (req, res) => {
   }
 };
 
-// PUT /reviews/:id - Uppdatera recension (endast av skaparen)
+// PUT /reviews/:id  (endast av skaparen)
 export const updateReview = async (req, res) => {
   try {
     const { rating, comment } = req.body;
@@ -86,7 +86,7 @@ export const updateReview = async (req, res) => {
   }
 };
 
-// DELETE /reviews/:id - Ta bort recension (endast av skaparen)
+// DELETE /reviews/:id (endast av skaparen)
 export const deleteReview = async (req, res) => {
   try {
     const review = await Review.findById(req.params.id);

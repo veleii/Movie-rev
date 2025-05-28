@@ -1,7 +1,7 @@
 import Movie from "./moviesModel.js";
 import Review from "../reviews/reviewsModel.js";
 
-// POST /movies - Lägg till ny film (admin)
+// POST /movies (admin)
 export const createMovie = async (req, res) => {
   try {
     const { title, director, releaseYear, genre } = req.body;
@@ -17,7 +17,7 @@ export const createMovie = async (req, res) => {
   }
 };
 
-// GET /movies - Hämta alla filmer
+// GET /movies
 export const getAllMovies = async (req, res) => {
   try {
     const movies = await Movie.find();
@@ -29,7 +29,7 @@ export const getAllMovies = async (req, res) => {
   }
 };
 
-// GET /movies/:id - Hämta en specifik film
+// GET /movies/:id
 export const getMovieById = async (req, res) => {
   try {
     const movie = await Movie.findById(req.params.id);
@@ -44,7 +44,7 @@ export const getMovieById = async (req, res) => {
   }
 };
 
-// PUT /movies/:id - Uppdatera film (admin)
+// PUT /movies/:id (admin)
 export const updateMovie = async (req, res) => {
   try {
     const updatedMovie = await Movie.findByIdAndUpdate(
@@ -68,7 +68,7 @@ export const updateMovie = async (req, res) => {
   }
 };
 
-// DELETE /movies/:id - Radera film (admin)
+// DELETE /movies/:id (admin)
 export const deleteMovie = async (req, res) => {
   try {
     const deleted = await Movie.findByIdAndDelete(req.params.id);
@@ -84,7 +84,7 @@ export const deleteMovie = async (req, res) => {
   }
 };
 
-// GET /movies/:id/reviews - Alla recensioner för en film
+// GET /movies/:id/reviews
 export const getMovieReviews = async (req, res) => {
   try {
     const reviews = await Review.find({ movieId: req.params.id }).populate(
@@ -100,12 +100,12 @@ export const getMovieReviews = async (req, res) => {
   }
 };
 
-// GET /movies/ratings - (VG) Snittbetyg för varje film
+/*  // GET /movies/ratings - (VG) Snittbetyg för varje film 
 export const getMoviesWithRatings = async (req, res) => {
   try {
     const movies = await Movie.find();
 
-    // Hämta snittbetyg per film
+    // Hämta snittbetyg per film 
     const results = await Promise.all(
       movies.map(async (movie) => {
         const reviews = await Review.find({ movieId: movie._id });
@@ -127,3 +127,4 @@ export const getMoviesWithRatings = async (req, res) => {
       .json({ message: "Kunde inte hämta betyg", error: err.message });
   }
 };
+ */
