@@ -1,0 +1,1360 @@
+{
+	"info": {
+		"_postman_id": "84131de3-1cb1-462e-b6df-77e96beacbbf",
+		"name": "Movie Review Platform - Velei",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43473210",
+		"_collection_link": "https://bold-comet-596367.postman.co/workspace/New-Team-Workspace~fd330f74-7a7d-4467-a980-c2aba0cabfc8/collection/43473210-84131de3-1cb1-462e-b6df-77e96beacbbf?action=share&source=collection_link&creator=43473210"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Velei\",\r\n    \"password\": \"hemlis\",\r\n    \"email\": \"minmail@mail.com\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Velei\",\r\n    \"password\": \"hemlis\",\r\n    \"email\": \"minmail@mail.com\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-Hrup0BM0XTBjdBue3qBuh5KpGPE\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:31:47 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Användare skapad\",\n    \"userId\": \"6836e61385ea93295c56f30c\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LOG IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"hemlis\",\r\n    \"email\": \"minmail@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"hemlis\",\r\n    \"email\": \"minmail@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e0-cntD+4qFr3/w7bkdkW3SF/NhQ/4\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:34:38 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Inloggad\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST MOVIE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Call Me by Your Name\",\r\n  \"director\": \"Luca Guadagnino\",\r\n  \"releaseYear\": 2017,\r\n  \"genre\": \"Drama\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Call Me by Your Name\",\r\n  \"director\": \"Luca Guadagnino\",\r\n  \"releaseYear\": 2017,\r\n  \"genre\": \"Drama\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "249",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f9-9G5OxoeIGZn5h/nghVtumF+TZTI\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:41:50 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Film skapad\",\n    \"movie\": {\n        \"title\": \"Call Me by Your Name\",\n        \"director\": \"Luca Guadagnino\",\n        \"releaseYear\": 2017,\n        \"genre\": \"Drama\",\n        \"_id\": \"6836e86e85ea93295c56f30f\",\n        \"createdAt\": \"2025-05-28T10:41:50.372Z\",\n        \"updatedAt\": \"2025-05-28T10:41:50.372Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GET MOVIES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET MOVIES",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "649",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"289-jAmWHY2d103gcZmt/ZfVynwee+8\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:46:35 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6836d11699b1a1986d0008a6\",\n        \"title\": \"Dune: Extended Cut\",\n        \"director\": \"Denis Villeneuve\",\n        \"releaseYear\": 2024,\n        \"genre\": \"Sci-Fi\",\n        \"createdAt\": \"2025-05-28T09:02:14.684Z\",\n        \"updatedAt\": \"2025-05-28T09:51:28.987Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6836e86e85ea93295c56f30f\",\n        \"title\": \"Call Me by Your Name\",\n        \"director\": \"Luca Guadagnino\",\n        \"releaseYear\": 2017,\n        \"genre\": \"Drama\",\n        \"createdAt\": \"2025-05-28T10:41:50.372Z\",\n        \"updatedAt\": \"2025-05-28T10:41:50.372Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6836e90985ea93295c56f311\",\n        \"title\": \"Call Me by Your Name\",\n        \"director\": \"Luca Guadagnino\",\n        \"releaseYear\": 2017,\n        \"genre\": \"Drama\",\n        \"createdAt\": \"2025-05-28T10:44:25.874Z\",\n        \"updatedAt\": \"2025-05-28T10:44:25.874Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET MOVIE BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/6836d11699b1a1986d0008a6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"6836d11699b1a1986d0008a6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/6836d11699b1a1986d0008a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"6836d11699b1a1986d0008a6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "215",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d7-u7/53BgSihsDoUf46XQoUzXiBqE\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:48:37 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6836d11699b1a1986d0008a6\",\n    \"title\": \"Dune: Extended Cut\",\n    \"director\": \"Denis Villeneuve\",\n    \"releaseYear\": 2024,\n    \"genre\": \"Sci-Fi\",\n    \"createdAt\": \"2025-05-28T09:02:14.684Z\",\n    \"updatedAt\": \"2025-05-28T09:51:28.987Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT MOVIE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Once Upon a Time in Hollywood – Extended Cut\",\r\n  \"director\": \"Quentin Tarantino\",\r\n  \"releaseYear\": 2019,\r\n  \"genre\": \"Drama\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/6836d11699b1a1986d0008a6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"6836d11699b1a1986d0008a6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Once Upon a Time in Hollywood – Extended Cut\",\r\n  \"director\": \"Quentin Tarantino\",\r\n  \"releaseYear\": 2019,\r\n  \"genre\": \"Drama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/6836d11699b1a1986d0008a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"6836d11699b1a1986d0008a6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "281",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"119-3MpihMmVUdQUMC4spUNnM6SsSB4\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 10:51:02 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Film uppdaterad\",\n    \"movie\": {\n        \"_id\": \"6836d11699b1a1986d0008a6\",\n        \"title\": \"Once Upon a Time in Hollywood – Extended Cut\",\n        \"director\": \"Quentin Tarantino\",\n        \"releaseYear\": 2019,\n        \"genre\": \"Drama\",\n        \"createdAt\": \"2025-05-28T09:02:14.684Z\",\n        \"updatedAt\": \"2025-05-28T10:51:02.898Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE MOVIE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/6836e86e85ea93295c56f30f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"6836e86e85ea93295c56f30f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/6836e86e85ea93295c56f30f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"6836e86e85ea93295c56f30f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-P3935QGQKqsorzR7TQ3PeGAyEE0\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:00:04 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Film raderad\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST REVIEW",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movieId\": \"6836d11699b1a1986d0008a6\",\r\n  \"rating\": 9,\r\n  \"comment\": \"Cool filmjävel!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"movieId\": \"6836d11699b1a1986d0008a6\",\r\n  \"rating\": 9,\r\n  \"comment\": \"Cool filmjävel!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "273",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"111-pVjLoYE4O7L5hIIVHM5v+oTTl7c\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:03:20 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recension skapad\",\n    \"review\": {\n        \"movieId\": \"6836d11699b1a1986d0008a6\",\n        \"userId\": \"6836e61385ea93295c56f30c\",\n        \"rating\": 9,\n        \"comment\": \"Cool filmjävel!\",\n        \"_id\": \"6836ed7883c6139eab64ec6f\",\n        \"createdAt\": \"2025-05-28T11:03:20.557Z\",\n        \"updatedAt\": \"2025-05-28T11:03:20.557Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GET REVIEWS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET REVIEWS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "976",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d0-WYxj1FSJBP3I1c676Ia8LdMdsMs\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:11:53 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6836e01463ded9b02bd0a951\",\n        \"movieId\": {\n            \"_id\": \"6836d11699b1a1986d0008a6\",\n            \"title\": \"Once Upon a Time in Hollywood – Extended Cut\"\n        },\n        \"userId\": {\n            \"username\": \"Tito\",\n            \"id\": \"6836d0d299b1a1986d0008a3\"\n        },\n        \"rating\": 8,\n        \"comment\": \"WOWO WOWOWO WOWOWO WOWOWOW OW OW!\",\n        \"createdAt\": \"2025-05-28T10:06:12.760Z\",\n        \"updatedAt\": \"2025-05-28T10:06:12.760Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6836ed7883c6139eab64ec6f\",\n        \"movieId\": {\n            \"_id\": \"6836d11699b1a1986d0008a6\",\n            \"title\": \"Once Upon a Time in Hollywood – Extended Cut\"\n        },\n        \"userId\": {\n            \"username\": \"Velei\",\n            \"id\": \"6836e61385ea93295c56f30c\"\n        },\n        \"rating\": 9,\n        \"comment\": \"Cool filmjävel!\",\n        \"createdAt\": \"2025-05-28T11:03:20.557Z\",\n        \"updatedAt\": \"2025-05-28T11:03:20.557Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6836ef1c83c6139eab64ec7c\",\n        \"movieId\": {\n            \"_id\": \"6836ee9983c6139eab64ec79\",\n            \"title\": \"Wicked\"\n        },\n        \"userId\": {\n            \"username\": \"Zana\",\n            \"id\": \"6836ee1a83c6139eab64ec72\"\n        },\n        \"rating\": 5,\n        \"comment\": \"Otrolig film! Bästa jag sett på länge.\",\n        \"createdAt\": \"2025-05-28T11:10:20.874Z\",\n        \"updatedAt\": \"2025-05-28T11:10:20.874Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET REVIEW BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reviews/6836e01463ded9b02bd0a951",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews",
+						"6836e01463ded9b02bd0a951"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reviews/6836e01463ded9b02bd0a951",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"6836e01463ded9b02bd0a951"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-7NPqhWrb3oE8yMUiLC0ra5wke0Q\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:13:03 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6836e01463ded9b02bd0a951\",\n    \"movieId\": {\n        \"_id\": \"6836d11699b1a1986d0008a6\",\n        \"title\": \"Once Upon a Time in Hollywood – Extended Cut\"\n    },\n    \"userId\": {\n        \"username\": \"Tito\",\n        \"id\": \"6836d0d299b1a1986d0008a3\"\n    },\n    \"rating\": 8,\n    \"comment\": \"WOWO WOWOWO WOWOWO WOWOWOW OW OW!\",\n    \"createdAt\": \"2025-05-28T10:06:12.760Z\",\n    \"updatedAt\": \"2025-05-28T10:06:12.760Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT REVIEWS BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rating\": 4,\r\n  \"comment\": \"Jag gillade den fortfarande, men inte lika mycket vid andra titten.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reviews/6836ed7883c6139eab64ec6f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews",
+						"6836ed7883c6139eab64ec6f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 4,\r\n  \"comment\": \"Jag gillade den fortfarande, men inte lika mycket vid andra titten.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/6836ed7883c6139eab64ec6f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"6836ed7883c6139eab64ec6f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "328",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"148-OiJLmVIFYk8IorMGf804IHEVAkU\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:15:26 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recension uppdaterad\",\n    \"review\": {\n        \"_id\": \"6836ed7883c6139eab64ec6f\",\n        \"movieId\": \"6836d11699b1a1986d0008a6\",\n        \"userId\": \"6836e61385ea93295c56f30c\",\n        \"rating\": 4,\n        \"comment\": \"Jag gillade den fortfarande, men inte lika mycket vid andra titten.\",\n        \"createdAt\": \"2025-05-28T11:03:20.557Z\",\n        \"updatedAt\": \"2025-05-28T11:15:26.796Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE REVIEW BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reviews/6836f11283c6139eab64ec8c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews",
+						"6836f11283c6139eab64ec8c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/6836f11283c6139eab64ec8c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"6836f11283c6139eab64ec8c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-hk5fEmbIscEEE3jvmectI03CjuQ\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:37:24 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recension borttagen\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET MOVIES/ID/REVIEWS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzZlNjEzODVlYTkzMjk1YzU2ZjMwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODQyODQ3OCwiZXhwIjoxNzQ4NDM5Mjc4fQ.rJLOBIOzuDn2iOXZ70828s4bWbd6MdOy7smeAzPy6gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/6836ee9983c6139eab64ec79/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"6836ee9983c6139eab64ec79",
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/6836ee9983c6139eab64ec79/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"6836ee9983c6139eab64ec79",
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285",
+							"type": "text"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-eJVI3hRf7MkrDlkjygkfrGrkZBQ\"",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 11:39:36 GMT",
+							"type": "text"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"type": "text"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6836ef1c83c6139eab64ec7c\",\n        \"movieId\": \"6836ee9983c6139eab64ec79\",\n        \"userId\": {\n            \"username\": \"Zana\",\n            \"id\": \"6836ee1a83c6139eab64ec72\"\n        },\n        \"rating\": 5,\n        \"comment\": \"Otrolig film! Bästa jag sett på länge.\",\n        \"createdAt\": \"2025-05-28T11:10:20.874Z\",\n        \"updatedAt\": \"2025-05-28T11:10:20.874Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
