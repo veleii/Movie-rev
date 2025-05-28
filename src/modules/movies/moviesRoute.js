@@ -7,7 +7,7 @@ import {
   deleteMovie,
   getMovieReviews,
   getMoviesWithRatings,
-} from "./moviesController";
+} from "./moviesController.js";
 
 import auth from "../../middleware/auth.js";
 import checkRole from "../../middleware/roleCheck.js";

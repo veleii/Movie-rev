@@ -1,5 +1,5 @@
 import Review from "./reviewsModel.js";
-import Movie from "./moviesModel.js";
+import Movie from "../movies/moviesModel.js";
 
 // POST /reviews - Skapa en recension (endast inloggade användare)
 export const createReview = async (req, res) => {

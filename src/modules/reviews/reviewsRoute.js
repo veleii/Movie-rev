@@ -5,9 +5,9 @@ import {
   getReviewById,
   updateReview,
   deleteReview,
-} from "../controllers/reviewsController.js";
+} from "./reviewsController.js";
 
-import auth from "../middleware/auth.js";
+import auth from "../../middleware/auth.js";
 
 const router = express.Router();
 

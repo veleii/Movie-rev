@@ -1,12 +1,12 @@
-import { User } from "./usersModel.js";
 import jwt from "jsonwebtoken";
+import User from "./usersModel.js";
 
 const createToken = (id, role) =>
   jwt.sign({ id, role }, process.env.JWT_SECRET, { expiresIn: "3h" });
 
 export const register = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, role } = req.body;
 
     // Kolla om e-post redan finns
     const existingUser = await User.findOne({ $or: [{ email }, { username }] });
@@ -17,7 +17,7 @@ export const register = async (req, res) => {
     }
 
     // Skapa ny användare
-    const user = new User({ username, email, password });
+    const user = new User({ username, email, password, role });
     await user.save();
 
     res.status(201).json({ message: "Användare skapad", userId: user._id });
@@ -36,7 +36,7 @@ export const login = async (req, res) => {
     // Hämta användare med e-post
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ message: "Fel e-post eller lösenord" });
+      return res.status(400).json({ message: "bajs" });
     }
 
     // Jämför lösenord via model

@@ -1,5 +1,5 @@
-import Movie from "../models/Movie.js";
-import Review from "../models/Review.js";
+import Movie from "./moviesModel.js";
+import Review from "../reviews/reviewsModel.js";
 
 // POST /movies - Lägg till ny film (admin)
 export const createMovie = async (req, res) => {
@@ -60,7 +60,7 @@ export const updateMovie = async (req, res) => {
       return res.status(404).json({ message: "Filmen hittades inte" });
     }
 
-    res.status(200).json({ message: "Film uppdaterad", updatedMovie });
+    res.status(200).json({ message: "Film uppdaterad", movie: updatedMovie });
   } catch (err) {
     res
       .status(500)
