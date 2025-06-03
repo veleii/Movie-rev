@@ -16,7 +16,6 @@ const router = express.Router();
 
 router.post("/", auth, checkRole("admin"), createMovie);
 router.get("/", getAllMovies);
-/* router.get("/ratings", getMoviesWithRatings); */
 router.get("/:id", getMovieById);
 router.put("/:id", auth, checkRole("admin"), updateMovie);
 router.delete("/:id", auth, checkRole("admin"), deleteMovie);
