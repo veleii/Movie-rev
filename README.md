@@ -1,3 +1,5 @@
 Movie Review Platform
 
-Min video:
+Min videolänk:
+
+https://youtu.be/oRNit96ltCc
