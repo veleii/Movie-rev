@@ -99,32 +99,3 @@ export const getMovieReviews = async (req, res) => {
       .json({ message: "Fel vid hämtning av recensioner", error: err.message });
   }
 };
-
-/*  // GET /movies/ratings - (VG) Snittbetyg för varje film 
-export const getMoviesWithRatings = async (req, res) => {
-  try {
-    const movies = await Movie.find();
-
-    // Hämta snittbetyg per film 
-    const results = await Promise.all(
-      movies.map(async (movie) => {
-        const reviews = await Review.find({ movieId: movie._id });
-        const avgRating = reviews.length
-          ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
-          : 0;
-
-        return {
-          ...movie.toObject(),
-          averageRating: avgRating.toFixed(1),
-        };
-      })
-    );
-
-    res.status(200).json(results);
-  } catch (err) {
-    res
-      .status(500)
-      .json({ message: "Kunde inte hämta betyg", error: err.message });
-  }
-};
- */
